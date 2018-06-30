@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Assuranceprojet-ejb">
+	 	<jta-data-source>java:/assuranceDS</jta-data-source>
+	 	<class>com.esprit.entities.Amendmentcs</class>
+	 	<class>com.esprit.entities.Aspnetuserroles</class>
+	 	<class>com.esprit.entities.AspnetuserrolesId</class>
+	 	<class>com.esprit.entities.Classes</class>
+	 	<class>com.esprit.entities.Contracts</class>
+	 	<class>com.esprit.entities.Customroles</class>
+	 	<class>com.esprit.entities.Customuserclaims</class>
+	 	<class>com.esprit.entities.Customuserlogins</class>
+	 	<class>com.esprit.entities.Customuserroles</class>
+	 	<class>com.esprit.entities.Fiscalpowers</class>
+	 	<class>com.esprit.entities.Folders</class>
+	 	<class>com.esprit.entities.Garages</class>
+	 	<class>com.esprit.entities.Historyrows</class>
+	 	<class>com.esprit.entities.Migrationhistory</class>
+	 	<class>com.esprit.entities.Notifications</class>
+	 	<class>com.esprit.entities.Rcprices</class>
+	 	<class>com.esprit.entities.Sinisters</class>
+	 	<class>com.esprit.entities.Thirds</class>
+	 	<class>com.esprit.entities.Users</class>
+	 	<class>com.esprit.entities.Vdcfranchiselevels</class>
+	 	<class>com.esprit.entities.Vehicles</class>
+	 	<class>com.esprit.entities.Warranties</class>
+	 	<class>com.esprit.entities.Warrantyassignments</class>
+	 	<class>com.esprit.entities.WarrantyassignmentsId</class>
+	 	<class>com.esprit.entities.Wreckreports</class>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+		</properties>
+	</persistence-unit>
+</persistence>

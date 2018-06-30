@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/template/template.xhtml">
+
+	
+
+	<ui:define name="content">
+
+<ui:define name="titre">
+	<center> <h2>	Add Folder </h2> </center>
+	</ui:define>
+	
+		<h:form id="addfolder">
+			<h:panelGrid columns="2" id="addfoldpanel">
+
+				<h:outputLabel value="Folder Title : " />
+				<h:inputText value="#{FolderBean.Folders.folderTitle}" />
+
+				<h:outputLabel value="Modification Date : " />
+				<h:inputText value="#{FolderBean.Folders.modificationDate}">
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+				</h:inputText>
+
+				<h:outputLabel value="Bonus-Malus Value : " />
+				<h:inputText value="#{FolderBean.Folders.bonusMalus}" />
+
+				<h:outputLabel value="Refunded Amount : " />
+				<h:inputText value="#{FolderBean.Folders.refundedAmount}" />
+
+				<h:outputLabel value="Comment : " />
+				<h:inputText value="#{FolderBean.Folders.comment}" />
+
+				<h:outputLabel value="Vehicle : " />
+				<h:selectOneMenu value="#{FolderBean.Folders.vehicles}">
+					<f:selectItem itemValue="" itemLabel="Choose registration" />
+					<f:selectItems value="#{FolderBean.Folders.vehicles.registration}"></f:selectItems>
+				</h:selectOneMenu>
+				
+				<h:outputLabel value="Renewable" />
+				<h:selectBooleanCheckbox value="#{FolderBean.Folders.renewable}" /> 
+					
+
+				<h:commandButton action="#{FolderBean.add()}" value="Add Folder" />
+				
+
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
